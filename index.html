@@ -1,10 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Лабораторна робота 3</title>
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+    <script src="task3.js"></script>
+    <script src="task4.js"></script>
+    <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
+<!--<p id="demo"></p>
+<a onclick="myFunction()">Click me</a>-->
+<header><h2>Лабораторна робота №3</h2></header>
+<p><strong>Тема роботи:</strong> Знайомство з JS, цикли, типи даних, базова взаємодія з
+        користувачем.</p>
+<p><strong>Мета роботи:</strong> Отримати навички підключення js-файлів, побудови простої
+        взаємодії з користувачем, а також знайомство з роботою циклів та умов;
+        дебаггінг.</p>
+<p><br/>Виконала студентка групи ПП-31 Дуля Дарина</p>
+<div class="Task" id="Task1">
+    <h3><strong>Завдання 1</strong></h3>
+    <p>Створити просту гру “передбачувач майбутнього” на базі
+        циклів, та простих взаємодії з користувачем ( prompt, alert, confirm).
+        Зберегти у змінних варіанти кількості дітей, професії, ім’я партнера та
+        країни. Пропонуючи різні варіанти користувачу зберігати його вибір.
+        Вивести на екран повідомленні “Ви укладите шлюб з __ та у вас буде __
+        дітей.” або “Ви переїдите у місто __ на посаду __” з вибором
+        користувача.</p>
 
+        <p>Вимоги до виконання:</p>
+        <ul>
+            <li>Виведення результату в alert.</li>
+            <li>Підключення js-файлу.</li>
+        </ul>
+
+    <a href="#Task1" class="Button" onclick="startTheGame()">Розпочати гру</a>
+</div>
+<div class="Task" id="Task2">
+    <h3><strong>Завдання 2</strong></h3>
+    <p>Трикутник Паскаля. Вивести на екран трикутник Паскаля,
+        починаючи з гори - з найменшого значення.</p>
+    <a href="#Task2" class="Button" onclick="Triangle()">Вивести трикутник</a>
+    <p id="Triangle" class="Triangle"></p>
+</div>
+<div class="Task" id="Task3">
+    <h3><strong>Завдання 3</strong></h3>
+    <p>Написати гру “Скільки лишилось пляшок на стіні”. Початкова
+        кількість пляшок 50. З кожнім новим рядком виводиться на одну пляшку
+        меньше (“49 пляшок стоїть на стіні, одна упала і залишилось”), поки не
+        залишиться жодної, тоді виведеться “жодної!”.
+        Ускладнене завдання: користувач вводить початкову кількість пляшок.</p>
+    <a href="#Task3" class="Button" onclick="PlayTheBottleGame()">Розпочати гру</a>
+    <div id="BottleGame"></div>
+</div>
+<div class="Task" id="Task4">
+    <h3><strong>Завдання 4</strong></h3>
+    <p>Дано масив<br/>
+        var arr = [<br/>
+        {value: 100, type: 'USD'},<br/>
+        {value: 215, type: 'EUR'},<br/>
+        {value: 7, type: 'EUR'},<br/>
+        {value: 99, type: 'USD'},<br/>
+        {value: 354, type: 'USD'},<br/>
+        {value: 12, type: 'EUR'},<br/>
+        {value: 77, type: 'USD'},<br/>
+        ];<br/>
+        1)Знайти суму всіх значень value у яких тип ‘USD’ та value менше за 100;<br/>
+        2)Повернути масив всіх об’єктів з типом ‘EUR’ та для кожного об’єкту
+        подвоїти значення value;</p>
+    <a href="#Task4" class="Button" onclick="GetResultOfTask4()">Вивести результат</a>
+    <div id="OutputArray"></div>
+</div>
 </body>
 </html>
