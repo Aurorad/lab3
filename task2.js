@@ -18,7 +18,7 @@ function GetSize(){
 }
 
 function CreatingTriangle() {
-    let message = "Трикутник Паскаля<br/>";
+    let message = 'Трикутник Паскаля<br/>';
     let size = GetSize();
     let arr = [1];
     message +=  AddToMessage(arr);
@@ -41,7 +41,7 @@ function CreatinRow(arr){
 }
 
 function AddToMessage (array) {
-    let s = "<br/>";
+    let s = '<br/>';
     array.forEach(element => s += element + ' ');
     return s;
 }

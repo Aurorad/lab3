@@ -12,31 +12,20 @@ function GetResultOfTask4(){
     ];
     let sum = getSumOfUSD(array);
     let showArray = getArrayOfEUR(array);
-    let message = `Пункт 1:`+sum + "<br/>Пункт 2:<br/>" + showArray;
-    document.getElementById('OutputArray').innerHTML = message;
+    document.getElementById('OutputArray').innerHTML = `Пункт 1: ${sum} <br/>Пункт 2:<br/> ${showArray}`;
 }
 
 function getSumOfUSD(array) {
-    let sum = 0;
-    array.forEach(element=>{
-        if (element.type === 'USD' && element.value < 100) {
-            sum += element.value;
-        }
-    });
-    return sum;
+    return array.filter(element => element.type === 'USD' && element.value < 100).
+        map (arr => arr.value).reduce((sum, current)=>sum+current, 0);
 }
 
 function getArrayOfEUR(array) {
-    let arr2 = new Array();
-    array.forEach(element=>{
-        if (element.type === 'EUR') {
-            element.value *= 2;
-            arr2.push(element);
-        }
-    });
+    let arr1 = array.filter(element => element.type==="EUR")
+        .map(element => {return {value: element.value*2, type: element.type}});
     let showArray= '';
-    arr2.forEach(element => {
-        showArray += element.value + ' ' + element.type + '<br/>';
+    arr1.forEach(element => {
+        showArray += `${element.value} ${element.type} <br/>`;
     });
     return showArray;
 }

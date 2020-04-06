@@ -16,8 +16,7 @@ function BottleGame(){
     let numberOfBottles = GetNumberOfBottles();
     let text = '<strong>Гра "Скільки лишилось пляшок на стіні"</strong><br/>';
     while(numberOfBottles > 0) {
-        text += numberOfBottles + ' пляшок стоїть на стіні, одна упала і залишилось '
-            + --numberOfBottles +'<br/>';
+        text += `${numberOfBottles} пляшок стоїть на стіні, одна упала і залишилось ${--numberOfBottles} <br/>`;
     }
     text += 'жодної!';
     return text;
